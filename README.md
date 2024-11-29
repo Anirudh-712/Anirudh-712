@@ -6,6 +6,10 @@
 😄 Pronouns: He/Him
 ⚡ Fun fact: I've worked on over 800 incidents and service requests, improving processes and providing data-driven solutions across various industries.
 
+Here is my resume/ Cv for your reference 
+
+[Anirudh Tumuluru- Resume_241127_135058.pdf](https://github.com/user-attachments/files/17962059/Anirudh.Tumuluru-.Resume_241127_135058.pdf)
+
 
 <!---
 Anirudh-712/Anirudh-712 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
