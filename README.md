@@ -53,6 +53,7 @@ Fixes and reports I filed upstream while building these tools. The state column 
 | Project | Contribution | State |
 |---|---|---|
 | [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1663) | PR #1663: accept every valid NEAR account ID in the swap address check without letting other chains' addresses through | **Merged** (19 Oct 2026) |
+| [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1665) | PR #1665: store uppercase bech32 and CashAddr addresses in lowercase (closes #1656) | **Merged** (19 Oct 2026) |
 | [KeystoneHQ/keystone3-firmware](https://github.com/KeystoneHQ/keystone3-firmware/issues/2313) | Issue #2313: TEX (ZIP 320) addresses fail the transparent-output check | Open, planned for the next feature release |
 | [defuse-protocol/defuse-frontend](https://github.com/defuse-protocol/defuse-frontend/pull/999) | PR #999: validate Zcash unified addresses per ZIP 316 (Bech32m, F4Jumble, typecodes) in the NEAR Intents app | Open |
 | [horizontalsystems/unstoppable-wallet-ios](https://github.com/horizontalsystems/unstoppable-wallet-ios/issues/7295) | Issue #7295: diagnosed why the Send screen showed a memo field for TEX addresses, then sent a fix (#7299) | Fixed by the maintainers in [#7300](https://github.com/horizontalsystems/unstoppable-wallet-ios/pull/7300), merged |
