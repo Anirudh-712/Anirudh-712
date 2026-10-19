@@ -18,6 +18,7 @@ next player gets seen.
 
 ## What I'm building
 
+<p>
 <a href="https://github.com/cryppit"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-cryppit-dark.svg">
   <img alt="Cryppit: autonomous agents and blockchain infrastructure" src="assets/card-cryppit-light.svg" width="410">
@@ -34,6 +35,7 @@ next player gets seen.
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-supercortex-dark.svg">
   <img alt="Supercortex: quantitative research and autonomous systems" src="assets/card-supercortex-light.svg" width="410">
 </picture></a>
+</p>
 
 | | What it is | Status | Look at |
 |---|---|---|---|
