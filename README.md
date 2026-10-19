@@ -47,15 +47,15 @@ next player gets seen.
 
 ## Open-source work
 
-Fixes and reports I filed upstream while building these tools. Nothing here is merged yet; the state column is read
-from GitHub, as of 19 Oct 2026.
+Fixes and reports I filed upstream while building these tools. The state column is read from GitHub, as of 19 Oct
+2026.
 
 | Project | Contribution | State |
 |---|---|---|
 | [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1663) | PR #1663: accept every valid NEAR account ID in the swap address check without letting other chains' addresses through | Open, reviewer: "Approving once CI is green" |
 | [KeystoneHQ/keystone3-firmware](https://github.com/KeystoneHQ/keystone3-firmware/issues/2313) | Issue #2313: TEX (ZIP 320) addresses fail the transparent-output check | Open, planned for the next feature release |
 | [defuse-protocol/defuse-frontend](https://github.com/defuse-protocol/defuse-frontend/pull/999) | PR #999: validate Zcash unified addresses per ZIP 316 (Bech32m, F4Jumble, typecodes) in the NEAR Intents app | Open |
-| [horizontalsystems/unstoppable-wallet-ios](https://github.com/horizontalsystems/unstoppable-wallet-ios/pull/7299) | PR #7299: no memo field for TEX addresses, with tests | Open |
+| [horizontalsystems/unstoppable-wallet-ios](https://github.com/horizontalsystems/unstoppable-wallet-ios/issues/7295) | Issue #7295: diagnosed why the Send screen showed a memo field for TEX addresses, then sent a fix (#7299) | Fixed by the maintainers in [#7300](https://github.com/horizontalsystems/unstoppable-wallet-ios/pull/7300), merged |
 | [near/docs](https://github.com/near/docs/pull/3121) | PR #3121: Chain Signatures docs point to the live MPC network instead of a fixed node count | Open |
 | [Near-One/bridge-sdk-rs](https://github.com/Near-One/bridge-sdk-rs/pull/324) | PR #324: correct BTC refund example (deposit and timelock), from running a real refund | Open |
 | [ZcashFoundation/zebra](https://github.com/ZcashFoundation/zebra/issues/11803) | Issue #11803: `z_validateaddress` rejects unified addresses with unknown items that ZIP 316 says to tolerate | Open |
