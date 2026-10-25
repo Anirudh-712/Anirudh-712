@@ -41,6 +41,8 @@ next player gets seen.
 |---|---|---|---|
 | **Cryppit** | My company: keyless, read-only tools for cross-chain money, and research into autonomous agents. | Active | [github.com/cryppit](https://github.com/cryppit) |
 | **Where's My Swap** | Paste a NEAR Intents order and see every hop to its payout, where the money is now and who can move it. Checks payouts on 33 chains and flags order accounts locked by NEAR Intents' operators. Free, no keys, no sign-in. | Live | [the checker](https://wheres-my-swap.station-wheres-my-swap.workers.dev) · [ZEC route](https://wheres-my-swap.station-wheres-my-swap.workers.dev/zec) |
+| **Where's My Withdrawal** | Paste a rollup withdrawal and see which step is missing and who can finish it, across Optimism, Base, Arbitrum, Linea and ZKsync. Read-only, no keys. | Live | [repo](https://github.com/cryppit/wheres-my-withdrawal) · [page](https://cryppit.github.io/wheres-my-withdrawal/) |
+| **NU7 Readiness** | Which Zcash wallets, libraries, bridges and swaps are ready for NU7, from public evidence (GitHub issues, PRs, releases, source). Read-only, re-checked hourly. | Live | [board](https://cryppit.github.io/nu7-readiness/) · [repo](https://github.com/cryppit/nu7-readiness) |
 | **Zcash Refund Helper** | Finds a ZEC or BTC deposit stuck in the NEAR Omni bridge and prints the bridge's own refund steps. Read-only: it never holds keys or signs. 213 tests, MIT, ZECATHON 2026 entry. Used on mainnet on 15 Oct 2026 to return a stuck deposit to its owner's address. | Released v0.1.0 | [repo](https://github.com/cryppit/zec-refund-helper) · [page](https://cryppit.github.io/zec-refund-helper/) |
 | **OnlyKrida** | Athlete discovery for India: tested, coach-verified results and opportunities for players the scouting pipeline doesn't reach. | Waitlist | [onlykrida.com](https://onlykrida.com) |
 | **Supercortex** | A local-first quant research desk that counts every backtest so the Deflated Sharpe Ratio stays honest, with an Indian crypto-tax cost model and a falsification engine whose job is to kill ideas. Backtests only. | Research prototype | [repo](https://github.com/Anirudh-712/SUPERCORTEX-) |
@@ -48,7 +50,7 @@ next player gets seen.
 ## Open-source work
 
 Fixes, documentation and bug reports I contributed upstream while building these tools. States are verified from GitHub
-as of 22 Oct 2026.
+as of 26 Oct 2026.
 
 | Project | Contribution | State |
 |---|---|---|
@@ -57,9 +59,16 @@ as of 22 Oct 2026.
 | [near/docs](https://github.com/near/docs/pull/3121) | PR #3121: made Chain Signatures documentation point to the live MPC network instead of a fixed node count | **Merged** (20 Oct 2026) |
 | [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1663) | PR #1663: accept every valid NEAR account ID in the swap address check without allowing other chains' addresses through | **Merged** (19 Oct 2026) |
 | [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1665) | PR #1665: store uppercase Bech32 and CashAddr addresses in their canonical lowercase form | **Merged** (19 Oct 2026) |
-| [ZcashFoundation/zebra](https://github.com/ZcashFoundation/zebra/pull/11880) | PR #11880: display ZIP 320 TEX addresses as Bech32m on Mainnet, Testnet and Regtest, with parsing round-trip tests for every network | Open |
+| [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1754) | PR #1754: in Insight privacy mode, an unnamed row's address shows its mask, matching the hidden amounts and the donut caption (closes #1542) | Open |
+| [wevm/viem](https://github.com/wevm/viem/pull/5295) | PR #5295: `getTimeToFinalize` waits for the dispute game to resolve, so an OP Stack withdrawal is no longer shown finalizable days early | Open |
+| [wevm/viem](https://github.com/wevm/viem/pull/5296) | PR #5296: read the super-root dispute game's `l2Timestamp` in the OP Stack prove-timing actions | Open |
+| [near/docs](https://github.com/near/docs/pull/3133) | PR #3133: Chain Signatures has four signing domains; document that only domain 0 and 1 sign today, and fix the stale `sign` link | Open |
+| [blockscout/blockscout](https://github.com/blockscout/blockscout/issues/14974) | Issue #14974: an OP Mainnet withdrawal is shown "Ready for relay" from a pre-fault-proofs proof, before it can finalize | Open |
+| [base/withdrawer](https://github.com/base/withdrawer/issues/99) | Issue #99: the `--fault-proofs` withdrawal flow is broken on OP Mainnet since Upgrade 20 (super-root games), with a patch | Open |
+| [shapeshift/web](https://github.com/shapeshift/web/issues/12794) | Issue #12794: Zcash sends will fail at NU7 because the consensus branch ID is pinned to NU6.3 | Open |
+| [ZcashFoundation/zebra](https://github.com/ZcashFoundation/zebra/pull/11880) | PR #11880: display ZIP 320 TEX addresses as Bech32m on Mainnet, Testnet and Regtest, with parsing round-trip tests for every network | **Merged** (23 Oct 2026) |
 | [defuse-protocol/sdk-monorepo](https://github.com/defuse-protocol/sdk-monorepo) | PRs [#497](https://github.com/defuse-protocol/sdk-monorepo/pull/497), [#498](https://github.com/defuse-protocol/sdk-monorepo/pull/498) and [#499](https://github.com/defuse-protocol/sdk-monorepo/pull/499): validate PoA destination memos, Dogecoin and Stellar checksums, and zero-amount withdrawals | Open |
-| [near/docs](https://github.com/near/docs) | PRs [#3120](https://github.com/near/docs/pull/3120) and [#3123](https://github.com/near/docs/pull/3123): document Omni Bridge relayers and add the currently supported chains | Open |
+| [near/docs](https://github.com/near/docs) | PRs [#3120](https://github.com/near/docs/pull/3120) and [#3123](https://github.com/near/docs/pull/3123): document Omni Bridge relayers and add the currently supported chains | **Merged** (22 Oct 2026) |
 | [XRPLF/xrpl.js](https://github.com/XRPLF/xrpl.js/pull/3546) | PR #3546: reject negative, fractional and NaN destination tags in `encodeXAddress` | Open |
 | [defuse-protocol/defuse-frontend](https://github.com/defuse-protocol/defuse-frontend/pull/999) | PR #999: validate Zcash unified addresses according to ZIP 316, including Bech32m, F4Jumble and receiver typecodes | Open |
 | [Near-One/bridge-sdk-rs](https://github.com/Near-One/bridge-sdk-rs/pull/324) | PR #324: correct the BTC refund example's required deposit and unsafe timelock | Open |
