@@ -13,6 +13,7 @@ next player gets seen.
 
 [Where's My Swap](https://wheres-my-swap.station-wheres-my-swap.workers.dev) ·
 [Zcash Refund Helper](https://cryppit.github.io/zec-refund-helper/) ·
+[Safe to Send](https://cryppit.github.io/safe-to-send/) ·
 [OnlyKrida](https://onlykrida.com) ·
 [LinkedIn](https://www.linkedin.com/in/anirudh-tumuluru-315a7b23b/)
 
@@ -41,7 +42,8 @@ next player gets seen.
 |---|---|---|---|
 | **Cryppit** | My company: keyless, read-only tools for cross-chain money, and research into autonomous agents. | Active | [github.com/cryppit](https://github.com/cryppit) |
 | **Where's My Swap** | Paste a NEAR Intents order and see every hop to its payout, where the money is now and who can move it. Checks payouts on 33 chains and flags order accounts locked by NEAR Intents' operators. Free, no keys, no sign-in. | Live | [the checker](https://wheres-my-swap.station-wheres-my-swap.workers.dev) · [ZEC route](https://wheres-my-swap.station-wheres-my-swap.workers.dev/zec) |
-| **Where's My Withdrawal** | Paste a rollup withdrawal and see which step is missing and who can finish it, across Optimism, Base, Arbitrum, Linea and ZKsync. Read-only, no keys. | Live | [repo](https://github.com/cryppit/wheres-my-withdrawal) · [page](https://cryppit.github.io/wheres-my-withdrawal/) |
+| **Where's My Withdrawal** | Paste a rollup withdrawal and see which step is missing and who can finish it, across Optimism, Base, Arbitrum, Robinhood Chain, Linea and ZKsync. Read-only, no keys. | Live | [repo](https://github.com/cryppit/wheres-my-withdrawal) · [page](https://cryppit.github.io/wheres-my-withdrawal/) |
+| **Safe to Send** | Paste an address and the chain you are sending on: see whether funds sent there can be reached, before you send. Reads 20 chains and catches smart wallets that only exist on one chain, with an archive of all 4.25M Abstract wallets that keeps working after Abstract shuts down on 15 Dec 2026. Read-only, no keys. | Live (26 Oct 2026) | [page](https://cryppit.github.io/safe-to-send/) · [repo](https://github.com/cryppit/safe-to-send) |
 | **NU7 Readiness** | Which Zcash wallets, libraries, bridges and swaps are ready for NU7, from public evidence (GitHub issues, PRs, releases, source). Read-only, re-checked hourly. | Live | [board](https://cryppit.github.io/nu7-readiness/) · [repo](https://github.com/cryppit/nu7-readiness) |
 | **Zcash Refund Helper** | Finds a ZEC or BTC deposit stuck in the NEAR Omni bridge and prints the bridge's own refund steps. Read-only: it never holds keys or signs. 213 tests, MIT, ZECATHON 2026 entry. Used on mainnet on 15 Oct 2026 to return a stuck deposit to its owner's address. | Released v0.1.0 | [repo](https://github.com/cryppit/zec-refund-helper) · [page](https://cryppit.github.io/zec-refund-helper/) |
 | **OnlyKrida** | Athlete discovery for India: tested, coach-verified results and opportunities for players the scouting pipeline doesn't reach. | Waitlist | [onlykrida.com](https://onlykrida.com) |
@@ -54,15 +56,16 @@ as of 26 Oct 2026.
 
 | Project | Contribution | State |
 |---|---|---|
+| [near/docs](https://github.com/near/docs/pull/3133) | PR #3133: fixed the stale Chain Signatures `sign` link; the maintainer kept the link fix and left out the note on signing domains | **Merged** (26 Oct 2026) |
 | [wevm/viem](https://github.com/wevm/viem/pull/5302) | PR [#5296](https://github.com/wevm/viem/pull/5296): use the withdrawal's L2 timestamp to find super-root dispute games in the OP Stack withdrawal actions; merged through the maintainer's [#5302](https://github.com/wevm/viem/pull/5302) with the commit kept as-is | **Merged** (26 Oct 2026) |
 | [wevm/viem](https://github.com/wevm/viem/pull/5298) | PR [#5295](https://github.com/wevm/viem/pull/5295): `getTimeToFinalize` waits for the dispute game to resolve, so an OP Stack withdrawal is no longer shown finalizable days early; merged through the maintainer's [#5298](https://github.com/wevm/viem/pull/5298) with the commit kept as-is | **Merged** (26 Oct 2026) |
+| [Near-One/omni-bridge](https://github.com/Near-One/omni-bridge/issues/251) | Issue #251 (large native NEAR withdrawals stuck): showed it was already fixed by #259 in the deployed omni.bridge.near 0.4.17; closed as completed | Closed (25 Oct 2026) |
 | [defuse-protocol/nearintents-mpp-sdk](https://github.com/defuse-protocol/nearintents-mpp-sdk/pull/36) | PR #36: implemented draft-nearintents-charge-01 refund and settlement recovery, including payer-controlled refunds, chain-canonical transaction hashes and replay protection | **Merged** (22 Oct 2026) |
 | [ZecHub/zechub](https://github.com/ZecHub/zechub/pull/2444) | PR #2444: corrected the Ironwood and turnstile documentation to explain that transfers between shielded pools reveal their amount | **Merged** (21 Oct 2026) |
 | [near/docs](https://github.com/near/docs/pull/3121) | PR #3121: made Chain Signatures documentation point to the live MPC network instead of a fixed node count | **Merged** (20 Oct 2026) |
 | [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1663) | PR #1663: accept every valid NEAR account ID in the swap address check without allowing other chains' addresses through | **Merged** (19 Oct 2026) |
 | [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1665) | PR #1665: store uppercase Bech32 and CashAddr addresses in their canonical lowercase form | **Merged** (19 Oct 2026) |
 | [zingolabs/zingo-mobile](https://github.com/zingolabs/zingo-mobile/pull/1754) | PR #1754: in Insight privacy mode, an unnamed row's address shows its mask, matching the hidden amounts and the donut caption (closes #1542) | Open |
-| [near/docs](https://github.com/near/docs/pull/3133) | PR #3133: Chain Signatures has four signing domains; document that only domain 0 and 1 sign today, and fix the stale `sign` link | Open |
 | [blockscout/blockscout](https://github.com/blockscout/blockscout/issues/14974) | Issue #14974: an OP Mainnet withdrawal is shown "Ready for relay" from a pre-fault-proofs proof, before it can finalize | Open |
 | [base/withdrawer](https://github.com/base/withdrawer/issues/99) | Issue #99: the `--fault-proofs` withdrawal flow is broken on OP Mainnet since Upgrade 20 (super-root games), with a patch | Open |
 | [shapeshift/web](https://github.com/shapeshift/web/issues/12794) | Issue #12794: Zcash sends will fail at NU7 because the consensus branch ID is pinned to NU6.3 | Open |
